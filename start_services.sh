@@ -10,6 +10,6 @@ else
 fi
 
 echo "Iniciando las API en el puerto 8000..."
-uvicorn src.main:app --host 127.0.0.1 --port 8000 --reload &
+uvicorn src.main:app --port 8000 --reload &
 
 wait
