@@ -1,9 +1,9 @@
 from sqlalchemy import Column, ForeignKey, Integer, String, Date, Float
 from sqlalchemy.orm import relationship
-from db.database import Base, TimestampMixin
+from src.db.database import Base, TimestampMixin
 
 
-class Direccion(Base, TimestampMixin):
+class Alquileres(Base, TimestampMixin):
     __tablename__ = "ALQUILERES"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -40,7 +40,7 @@ class Direccion(Base, TimestampMixin):
     )
 
     estado_alquiler = relationship(
-        "EstadoAlquiler",
+        "EstadosAlquiler",
         back_populates="alquileres",
     ) 
 

@@ -1,9 +1,9 @@
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
-from db.database import Base, TimestampMixin
+from src.db.database import Base, TimestampMixin
 
 
-class Direccion(Base, TimestampMixin): 
+class RolesUsuarios(Base, TimestampMixin): 
     __tablename__ = "ROLES_USUARIOS"
 
     id = Column(Integer, primary_key=True, index=True)

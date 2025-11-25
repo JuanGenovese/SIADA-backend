@@ -1,9 +1,9 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
-from db.database import Base, TimestampMixin
+from src.db.database import Base, TimestampMixin
 
 
-class Direccion(Base, TimestampMixin):
+class Usuarios(Base, TimestampMixin):
     __tablename__ = "USUARIOS"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -16,7 +16,7 @@ class Direccion(Base, TimestampMixin):
     carnet_conducir = Column(Boolean, nullable=False, default=False)
     id_rol = Column(
         Integer,             
-        ForeignKey("USUARIOS_ROLES.id"),
+        ForeignKey("ROLES_USUARIOS.id"),
         nullable=True)
          
   
