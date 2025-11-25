@@ -1,9 +1,9 @@
 from sqlalchemy import Column, ForeignKey, Integer, String, Float, DateTime
 from sqlalchemy.orm import relationship
-from db.database import Base, TimestampMixin
+from src.db.database import Base, TimestampMixin
 
 
-class Direccion(Base, TimestampMixin):
+class Pagos(Base, TimestampMixin):
     __tablename__ = "PAGOS"
 
     id = Column(Integer, primary_key=True, index=True)

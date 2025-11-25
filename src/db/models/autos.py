@@ -1,9 +1,9 @@
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
-from db.database import Base, TimestampMixin
+from src.db.database import Base, TimestampMixin
 
 
-class Direccion(Base, TimestampMixin):
+class Autos(Base, TimestampMixin):
     __tablename__ = "AUTOS" 
 
     id = Column(Integer, primary_key=True, index=True)
